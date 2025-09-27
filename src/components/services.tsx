@@ -81,7 +81,7 @@ const Services = () => {
   ]
 
   return (
-    <section id="services" className="py-20 relative overflow-hidden">
+    <section id="services" className="py-20 relative overflow-hidden section-transition">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-800 via-slate-900 to-slate-800">
         <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-float"></div>

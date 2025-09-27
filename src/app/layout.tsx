@@ -13,12 +13,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name - Senior MERN Stack Developer | Full-Stack Solutions",
-  description: "Senior MERN Stack Developer with 5+ years experience building scalable web applications. Expert in MongoDB, Express.js, React, Node.js, TypeScript, and modern web technologies.",
-  keywords: ["MERN stack", "full-stack developer", "MongoDB", "Express.js", "React", "Node.js", "TypeScript", "JavaScript", "web development", "API development"],
-  authors: [{ name: "Your Name" }],
-  creator: "Your Name",
-  publisher: "Your Name",
+  title: "Rohail Butt - Senior MERN Stack Developer | Full-Stack Solutions",
+  description:
+    "Senior MERN Stack Developer with 5+ years experience building scalable web applications. Expert in MongoDB, Express.js, React, Node.js, TypeScript, and modern web technologies.",
+  keywords: [
+    "MERN stack",
+    "full-stack developer",
+    "MongoDB",
+    "Express.js",
+    "React",
+    "Node.js",
+    "TypeScript",
+    "JavaScript",
+    "web development",
+    "API development",
+  ],
+  authors: [{ name: "Rohail Butt" }],
+  creator: "Rohail Butt",
+  publisher: "Rohail Butt",
   robots: {
     index: true,
     follow: true,
@@ -34,14 +46,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://yourname.com",
-    title: "Your Name - Senior MERN Stack Developer",
-    description: "Senior MERN Stack Developer specializing in full-stack web applications and modern development practices.",
-    siteName: "Your Name Portfolio",
+    title: "Rohail Butt - Senior MERN Stack Developer",
+    description:
+      "Senior MERN Stack Developer specializing in full-stack web applications and modern development practices.",
+    siteName: "Rohail Butt Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Your Name - Senior MERN Stack Developer",
-    description: "Senior MERN Stack Developer specializing in full-stack web applications and modern development practices.",
+    title: "Rohail Butt - Senior MERN Stack Developer",
+    description:
+      "Senior MERN Stack Developer specializing in full-stack web applications and modern development practices.",
     creator: "@yourname",
   },
 };
@@ -58,7 +72,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
