@@ -1,6 +1,6 @@
-# Portfolio Website
+# Senior MERN Stack Developer Portfolio
 
-A modern, responsive portfolio website built with Next.js, TypeScript, Tailwind CSS, and Shadcn UI components. This portfolio is inspired by Muhammad Akash's design and features a clean, professional layout perfect for showcasing your work and services.
+A modern, responsive portfolio website built with Next.js, TypeScript, Tailwind CSS, and Shadcn UI components. This portfolio showcases my expertise as a Senior MERN Stack Developer with a clean, professional layout perfect for highlighting technical skills and project experience.
 
 ## 🚀 Features
 
@@ -16,22 +16,31 @@ A modern, responsive portfolio website built with Next.js, TypeScript, Tailwind 
 ## 📋 Sections
 
 1. **Header**: Fixed navigation with smooth scrolling
-2. **Hero**: Eye-catching introduction with stats and CTA buttons
-3. **About**: Personal story, skills, and achievements
-4. **Services**: Comprehensive service offerings with detailed descriptions
-5. **Projects**: Portfolio showcase with filtering capabilities
-6. **Testimonials**: Client feedback and reviews
-7. **Contact**: Contact form and information
-8. **Footer**: Links, social media, and newsletter signup
+2. **Hero**: Professional introduction with technical expertise and stats
+3. **About**: Technical background, skills, and career journey
+4. **Services**: Development services and technical capabilities
+5. **Projects**: Portfolio showcase with MERN stack projects and filtering
+6. **Testimonials**: Client and colleague feedback
+7. **Contact**: Contact form and professional information
+8. **Footer**: Links, social media, and professional connections
 
 ## 🛠️ Tech Stack
 
+### Portfolio Website
 - **Framework**: Next.js 15
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **UI Components**: Shadcn UI
 - **Icons**: Lucide React
 - **Fonts**: Geist Sans & Geist Mono
+
+### Development Expertise
+- **Frontend**: React, Next.js, TypeScript, JavaScript (ES6+)
+- **Backend**: Node.js, Express.js, RESTful APIs, GraphQL
+- **Database**: MongoDB, Mongoose, PostgreSQL, Redis
+- **Cloud & DevOps**: AWS, Docker, Kubernetes, CI/CD
+- **Tools**: Git, Webpack, Babel, Jest, ESLint
+- **Additional**: Python, React Native, Socket.io, JWT
 
 ## 🚀 Getting Started
 
@@ -70,38 +79,41 @@ Update the following files with your personal information:
    - Replace "Your Name" with your actual name
 
 2. **Hero Component** (`src/components/hero.tsx`):
-   - Update name, title, and company information
+   - Update name, title, and professional information
    - Replace placeholder profile image
-   - Modify the introduction text
-   - Update statistics (years of experience, projects, etc.)
+   - Modify the introduction text to highlight your MERN expertise
+   - Update statistics (years of experience, projects, technologies mastered)
 
 3. **About Component** (`src/components/about.tsx`):
-   - Update your journey and story
-   - Modify skills list
-   - Update achievements
+   - Update your technical journey and career story
+   - Modify skills list to reflect your MERN stack expertise
+   - Update achievements and certifications
 
 4. **Services Component** (`src/components/services.tsx`):
-   - Customize services offered
-   - Update service descriptions and features
+   - Customize development services offered
+   - Update service descriptions focusing on MERN stack capabilities
+   - Add specific technologies and frameworks you specialize in
 
 5. **Projects Component** (`src/components/projects.tsx`):
-   - Replace with your actual projects
-   - Update project descriptions, technologies, and links
-   - Add real project images
+   - Replace with your actual MERN stack projects
+   - Update project descriptions, technologies, and GitHub links
+   - Add real project screenshots and live demo links
+   - Include projects showcasing MongoDB, Express, React, and Node.js
 
 6. **Testimonials Component** (`src/components/testimonials.tsx`):
-   - Replace with real client testimonials
-   - Update client information and feedback
+   - Replace with real client and colleague testimonials
+   - Update client information and project feedback
+   - Include testimonials highlighting your technical skills
 
 7. **Contact Component** (`src/components/contact.tsx`):
    - Update contact information
-   - Modify social media links
-   - Customize form fields if needed
+   - Modify social media links (LinkedIn, GitHub, etc.)
+   - Customize form fields for development inquiries
 
 8. **Footer Component** (`src/components/footer.tsx`):
-   - Update company information
+   - Update personal information
    - Modify social media links
-   - Update footer links
+   - Update footer links to include GitHub, Stack Overflow, etc.
 
 ### Styling
 
