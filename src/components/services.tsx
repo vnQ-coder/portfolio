@@ -1,92 +1,98 @@
 const Services = () => {
   const services = [
     {
-      title: 'Web Development',
-      description: 'Custom web applications built with modern technologies like React, Next.js, and TypeScript. Responsive, fast, and user-friendly solutions.',
-      icon: '🌐',
+      title: 'MERN Stack Development',
+      description: 'Full-stack web applications built with MongoDB, Express.js, React, and Node.js. Scalable, modern solutions with robust architecture.',
+      icon: '⚡',
+      features: [
+        'MongoDB Database Design',
+        'Express.js API Development',
+        'React Frontend Applications',
+        'Node.js Backend Services',
+        'Real-time Applications',
+        'RESTful & GraphQL APIs'
+      ]
+    },
+    {
+      title: 'Frontend Development',
+      description: 'Modern, responsive user interfaces built with React, TypeScript, and cutting-edge frontend technologies.',
+      icon: '🎨',
       features: [
         'React & Next.js Applications',
-        'Progressive Web Apps (PWA)',
-        'E-commerce Solutions',
-        'Custom CMS Development',
-        'API Integration',
+        'TypeScript Development',
+        'Responsive UI/UX Design',
+        'State Management (Redux, Context)',
+        'Component Libraries',
         'Performance Optimization'
       ]
     },
     {
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications that deliver exceptional user experiences across iOS and Android devices.',
-      icon: '📱',
+      title: 'Backend Development',
+      description: 'Robust server-side applications with Node.js, Express.js, and scalable database solutions.',
+      icon: '🔧',
       features: [
-        'React Native Development',
-        'iOS & Android Apps',
-        'Cross-platform Solutions',
-        'App Store Optimization',
-        'Push Notifications',
-        'Offline Functionality'
+        'Node.js & Express.js APIs',
+        'Database Design & Optimization',
+        'Authentication & Authorization',
+        'Microservices Architecture',
+        'API Documentation',
+        'Error Handling & Logging'
       ]
     },
     {
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and deployment solutions using AWS, Azure, and other leading cloud platforms.',
+      title: 'Database Solutions',
+      description: 'Expert MongoDB development with Mongoose ODM, data modeling, and performance optimization.',
+      icon: '🗄️',
+      features: [
+        'MongoDB Schema Design',
+        'Mongoose ODM Integration',
+        'Database Performance Tuning',
+        'Data Migration & Backup',
+        'Indexing Strategies',
+        'Query Optimization'
+      ]
+    },
+    {
+      title: 'DevOps & Deployment',
+      description: 'Cloud deployment and DevOps solutions using AWS, Docker, and modern CI/CD practices.',
       icon: '☁️',
       features: [
-        'AWS & Azure Migration',
-        'Microservices Architecture',
-        'DevOps & CI/CD',
-        'Container Orchestration',
-        'Database Optimization',
+        'AWS Cloud Services',
+        'Docker Containerization',
+        'CI/CD Pipeline Setup',
+        'Environment Configuration',
+        'Monitoring & Logging',
         'Security Implementation'
       ]
     },
     {
-      title: 'Consulting & Strategy',
-      description: 'Strategic technology consulting to help businesses make informed decisions and optimize their digital transformation journey.',
-      icon: '💼',
+      title: 'Code Review & Mentoring',
+      description: 'Technical leadership, code reviews, and mentoring to ensure high-quality development practices.',
+      icon: '👨‍💻',
       features: [
-        'Technology Roadmap Planning',
-        'Digital Transformation',
-        'Architecture Review',
-        'Team Building & Training',
-        'Process Optimization',
-        'Vendor Selection'
-      ]
-    },
-    {
-      title: 'UI/UX Design',
-      description: 'Beautiful, intuitive user interfaces designed with user experience at the forefront, following modern design principles.',
-      icon: '🎨',
-      features: [
-        'User Research & Testing',
-        'Wireframing & Prototyping',
-        'Visual Design Systems',
-        'Responsive Design',
-        'Accessibility Compliance',
-        'Design-to-Development Handoff'
-      ]
-    },
-    {
-      title: 'Maintenance & Support',
-      description: 'Ongoing maintenance, updates, and 24/7 support to ensure your applications run smoothly and securely.',
-      icon: '🔧',
-      features: [
-        'Bug Fixes & Updates',
-        'Performance Monitoring',
-        'Security Patches',
-        'Feature Enhancements',
-        '24/7 Technical Support',
-        'Regular Health Checks'
+        'Code Quality Reviews',
+        'Technical Architecture Guidance',
+        'Team Mentoring',
+        'Best Practices Implementation',
+        'Performance Audits',
+        'Security Assessments'
       ]
     }
   ]
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Services</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive technology solutions tailored to meet your business needs and drive digital transformation.
+    <section id="services" className="py-20 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-800 via-slate-900 to-slate-800">
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl font-bold text-white mb-4 gradient-text">Development Services</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Full-stack MERN development services tailored to build scalable, modern web applications that drive business growth.
           </p>
         </div>
 
@@ -94,22 +100,25 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-100"
+              className="glass-dark rounded-xl p-6 hover-lift card-hover animate-fade-in"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-              <p className="text-gray-600 mb-4">{service.description}</p>
+              <div className="text-4xl mb-4 animate-float" style={{ animationDelay: `${index * 0.5}s` }}>
+                {service.icon}
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+              <p className="text-gray-300 mb-4">{service.description}</p>
               
               <div className="space-y-2">
                 {service.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                    <span className="text-sm text-gray-600">{feature}</span>
+                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 animate-pulse"></span>
+                    <span className="text-sm text-gray-300">{feature}</span>
                   </div>
                 ))}
               </div>
               
-              <button className="mt-6 w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200">
+              <button className="mt-6 w-full btn-animate text-white py-2 px-4 rounded-lg font-semibold hover-lift">
                 Learn More
               </button>
             </div>
@@ -117,58 +126,41 @@ const Services = () => {
         </div>
 
         {/* Process Section */}
-        <div className="mt-20">
-          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Process</h3>
+        <div className="mt-20 animate-fade-in" style={{ animationDelay: '1s' }}>
+          <h3 className="text-3xl font-bold text-white text-center mb-12 gradient-text">Development Process</h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                1
+            {[
+              { number: 1, title: "Analysis", description: "Understanding your requirements, technical specifications, and defining the project architecture." },
+              { number: 2, title: "Design", description: "Creating database schemas, API structure, and UI/UX wireframes for the application." },
+              { number: 3, title: "Development", description: "Building the full-stack application using MERN technologies with regular code reviews and testing." },
+              { number: 4, title: "Deploy", description: "Deploying to production with CI/CD pipelines and providing ongoing maintenance and support." }
+            ].map((step, index) => (
+              <div key={index} className="text-center animate-slide-up hover-lift" style={{ animationDelay: `${1.2 + index * 0.2}s` }}>
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold animate-pulse-glow hover-glow">
+                  {step.number}
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-2">{step.title}</h4>
+                <p className="text-gray-300 text-sm">
+                  {step.description}
+                </p>
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Discovery</h4>
-              <p className="text-gray-600 text-sm">
-                Understanding your business goals, requirements, and challenges through detailed consultation.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                2
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Planning</h4>
-              <p className="text-gray-600 text-sm">
-                Creating a detailed project roadmap with timelines, milestones, and resource allocation.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                3
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Development</h4>
-              <p className="text-gray-600 text-sm">
-                Building your solution using agile methodologies with regular updates and feedback cycles.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                4
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Launch</h4>
-              <p className="text-gray-600 text-sm">
-                Deploying your solution and providing ongoing support to ensure continued success.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Ready to Start Your Project?</h3>
-            <p className="text-lg mb-6 opacity-90">
-              Let's discuss how we can help transform your ideas into reality with cutting-edge technology solutions.
-            </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200">
-              Get Free Consultation
-            </button>
+        <div className="mt-16 text-center animate-fade-in" style={{ animationDelay: '2s' }}>
+          <div className="glass-dark rounded-xl p-8 text-white relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl"></div>
+            <div className="relative z-10">
+              <h3 className="text-2xl font-bold mb-4 gradient-text">Ready to Build Your Next App?</h3>
+              <p className="text-lg mb-6 text-gray-300">
+                Let&apos;s discuss how I can help you build a scalable, modern web application using the MERN stack.
+              </p>
+              <button className="btn-animate text-white px-8 py-3 rounded-lg font-semibold hover-lift">
+                Start Your Project
+              </button>
+            </div>
           </div>
         </div>
       </div>

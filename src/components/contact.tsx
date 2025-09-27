@@ -72,40 +72,46 @@ const Contact = () => {
   ]
 
   const services = [
-    'Web Development',
-    'Mobile App Development',
-    'Cloud Solutions',
-    'Consulting & Strategy',
-    'UI/UX Design',
-    'Maintenance & Support',
+    'MERN Stack Development',
+    'Frontend Development',
+    'Backend Development',
+    'Database Solutions',
+    'DevOps & Deployment',
+    'Code Review & Mentoring',
     'Other'
   ]
 
   return (
-    <section id="contact" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to start your next project? Let's discuss how we can bring your ideas to life with cutting-edge technology solutions.
+    <section id="contact" className="py-20 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+        <div className="absolute top-1/4 right-1/3 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl font-bold text-white mb-4 gradient-text">Get In Touch</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Ready to build your next MERN stack application? Let&apos;s discuss how I can help bring your ideas to life with modern web technologies.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-gray-50 rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
+          <div className="glass-dark rounded-xl p-8 hover-lift animate-slide-in-left" style={{ animationDelay: '0.2s' }}>
+            <h3 className="text-2xl font-bold text-white mb-6 gradient-text">Start Your Project</h3>
             
             {isSubmitted && (
-              <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-                Thank you for your message! I'll get back to you within 24 hours.
+              <div className="mb-6 p-4 glass bg-green-500/20 border border-green-400/30 text-green-300 rounded-lg">
+                Thank you for your message! I&apos;ll get back to you within 24 hours.
               </div>
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                     Full Name *
                   </label>
                   <input
@@ -115,13 +121,13 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                    className="w-full px-4 py-3 glass border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500/50 transition-all duration-300 text-white placeholder-gray-400"
                     placeholder="John Doe"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                     Email Address *
                   </label>
                   <input
@@ -131,14 +137,14 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                    className="w-full px-4 py-3 glass border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500/50 transition-all duration-300 text-white placeholder-gray-400"
                     placeholder="john@example.com"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                   Company
                 </label>
                 <input
@@ -147,21 +153,21 @@ const Contact = () => {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                  className="w-full px-4 py-3 glass border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500/50 transition-all duration-300 text-white placeholder-gray-400"
                   placeholder="Your Company Name"
                 />
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                  Service Interested In
+                <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                  Development Service Needed
                 </label>
                 <select
                   id="service"
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                  className="w-full px-4 py-3 glass border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500/50 transition-all duration-300 text-white bg-slate-800/50"
                 >
                   <option value="">Select a service</option>
                   {services.map((service, index) => (
@@ -173,7 +179,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                   Project Details *
                 </label>
                 <textarea
@@ -183,18 +189,18 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
-                  placeholder="Tell me about your project, timeline, and any specific requirements..."
+                  className="w-full px-4 py-3 glass border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500/50 transition-all duration-300 text-white placeholder-gray-400"
+                  placeholder="Describe your project requirements, timeline, and any specific MERN stack features needed..."
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors duration-200 ${
+                className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 hover-lift ${
                   isSubmitting
                     ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-blue-600 hover:bg-blue-700 text-white'
+                    : 'btn-animate text-white'
                 }`}
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -203,17 +209,17 @@ const Contact = () => {
           </div>
 
           {/* Contact Information */}
-          <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+          <div className="animate-slide-in-right" style={{ animationDelay: '0.4s' }}>
+            <h3 className="text-2xl font-bold text-white mb-6 gradient-text">Contact Information</h3>
             
             <div className="space-y-6 mb-8">
               {contactInfo.map((info, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="text-2xl">{info.icon}</div>
+                <div key={index} className="flex items-start space-x-4 glass-dark p-4 rounded-xl hover-lift animate-slide-up" style={{ animationDelay: `${0.6 + index * 0.1}s` }}>
+                  <div className="text-2xl animate-float">{info.icon}</div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900">{info.title}</h4>
-                    <p className="text-blue-600 font-medium">{info.details}</p>
-                    <p className="text-gray-600 text-sm">{info.description}</p>
+                    <h4 className="text-lg font-semibold text-white">{info.title}</h4>
+                    <p className="text-blue-400 font-medium">{info.details}</p>
+                    <p className="text-gray-300 text-sm">{info.description}</p>
                   </div>
                 </div>
               ))}
@@ -221,7 +227,7 @@ const Contact = () => {
 
             {/* Quick Response */}
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6 border border-blue-100">
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Quick Response Guarantee</h4>
+              <h4 className="text-lg font-semibold text-gray-900 mb-3">Development Guarantee</h4>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
@@ -229,15 +235,15 @@ const Contact = () => {
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  Free initial consultation
+                  Free technical consultation
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  Detailed project proposal
+                  Detailed project roadmap
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  Flexible engagement models
+                  Clean, documented code
                 </li>
               </ul>
             </div>
@@ -249,26 +255,30 @@ const Contact = () => {
                 <a
                   href="#"
                   className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
+                  title="LinkedIn"
                 >
                   <span className="text-lg">💼</span>
                 </a>
                 <a
                   href="#"
                   className="w-12 h-12 bg-gray-800 text-white rounded-full flex items-center justify-center hover:bg-gray-900 transition-colors duration-200"
+                  title="GitHub"
                 >
                   <span className="text-lg">🐙</span>
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors duration-200"
+                  className="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors duration-200"
+                  title="Stack Overflow"
                 >
-                  <span className="text-lg">🐦</span>
+                  <span className="text-lg">🔍</span>
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center hover:bg-purple-700 transition-colors duration-200"
+                  className="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors duration-200"
+                  title="Twitter"
                 >
-                  <span className="text-lg">📷</span>
+                  <span className="text-lg">🐦</span>
                 </a>
               </div>
             </div>
@@ -276,31 +286,31 @@ const Contact = () => {
         </div>
 
         {/* FAQ Section */}
-        <div className="mt-20">
-          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">Frequently Asked Questions</h3>
+        <div className="mt-20 animate-fade-in" style={{ animationDelay: '1.5s' }}>
+          <h3 className="text-3xl font-bold text-white text-center mb-12 gradient-text">Frequently Asked Questions</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">What's your typical project timeline?</h4>
-              <p className="text-gray-600">
-                Project timelines vary based on complexity. Simple websites take 2-4 weeks, while complex applications can take 3-6 months. I provide detailed timelines during our initial consultation.
+            <div className="glass-dark rounded-xl p-6 hover-lift card-hover animate-slide-up" style={{ animationDelay: '1.7s' }}>
+              <h4 className="text-lg font-semibold text-white mb-3">What&apos;s your typical MERN project timeline?</h4>
+              <p className="text-gray-300">
+                MERN stack projects typically take 4-12 weeks depending on complexity. Simple CRUD applications take 4-6 weeks, while complex applications with real-time features can take 8-12 weeks.
               </p>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Do you provide ongoing support?</h4>
-              <p className="text-gray-600">
-                Yes! I offer comprehensive maintenance and support packages to ensure your project continues to perform optimally after launch.
+            <div className="glass-dark rounded-xl p-6 hover-lift card-hover animate-slide-up" style={{ animationDelay: '1.9s' }}>
+              <h4 className="text-lg font-semibold text-white mb-3">Do you provide code documentation?</h4>
+              <p className="text-gray-300">
+                Yes! I provide comprehensive documentation including API documentation, code comments, setup instructions, and deployment guides for all projects.
               </p>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">What technologies do you work with?</h4>
-              <p className="text-gray-600">
-                I specialize in modern web technologies including React, Next.js, TypeScript, Node.js, Python, AWS, and various databases and cloud platforms.
+            <div className="glass-dark rounded-xl p-6 hover-lift card-hover animate-slide-up" style={{ animationDelay: '2.1s' }}>
+              <h4 className="text-lg font-semibold text-white mb-3">What MERN technologies do you specialize in?</h4>
+              <p className="text-gray-300">
+                I specialize in MongoDB with Mongoose, Express.js APIs, React with modern hooks, Node.js server development, and additional tools like Socket.io, JWT, and AWS deployment.
               </p>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Can you work with our existing team?</h4>
-              <p className="text-gray-600">
-                Absolutely! I'm experienced in collaborating with in-house teams and can integrate seamlessly with your existing development processes.
+            <div className="glass-dark rounded-xl p-6 hover-lift card-hover animate-slide-up" style={{ animationDelay: '2.3s' }}>
+              <h4 className="text-lg font-semibold text-white mb-3">Do you handle database design and optimization?</h4>
+              <p className="text-gray-300">
+                Absolutely! I handle MongoDB schema design, indexing strategies, query optimization, and database performance tuning to ensure your application scales efficiently.
               </p>
             </div>
           </div>

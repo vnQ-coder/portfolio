@@ -3,89 +3,96 @@ import Image from 'next/image'
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution built with Next.js, featuring advanced search, payment integration, and admin dashboard.',
+      title: 'Task Management App',
+      description: 'A full-stack MERN application for project and task management with real-time collaboration, file sharing, and team analytics.',
       image: '/api/placeholder/600/400',
-      technologies: ['Next.js', 'TypeScript', 'Stripe', 'PostgreSQL', 'Tailwind CSS'],
-      category: 'Web Development',
+      technologies: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Socket.io', 'JWT'],
+      category: 'MERN Stack',
       liveUrl: '#',
       githubUrl: '#',
       featured: true
     },
     {
-      title: 'Mobile Banking App',
-      description: 'A secure mobile banking application with biometric authentication, real-time transactions, and comprehensive financial management.',
+      title: 'E-Learning Platform',
+      description: 'A comprehensive learning management system with video streaming, progress tracking, quizzes, and certificate generation.',
       image: '/api/placeholder/600/400',
-      technologies: ['React Native', 'Node.js', 'MongoDB', 'AWS', 'JWT'],
-      category: 'Mobile Development',
+      technologies: ['MongoDB', 'Express.js', 'React', 'Node.js', 'AWS S3', 'Stripe'],
+      category: 'MERN Stack',
       liveUrl: '#',
       githubUrl: '#',
       featured: true
     },
     {
-      title: 'AI-Powered Analytics Dashboard',
-      description: 'A sophisticated analytics platform that uses machine learning to provide business insights and predictive analytics.',
+      title: 'Social Media Dashboard',
+      description: 'A social media management platform with post scheduling, analytics, and multi-platform integration using MERN stack.',
       image: '/api/placeholder/600/400',
-      technologies: ['Python', 'React', 'TensorFlow', 'Docker', 'Kubernetes'],
-      category: 'Data Science',
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: false
-    },
-    {
-      title: 'Cloud Migration Project',
-      description: 'Successfully migrated a legacy enterprise system to AWS cloud infrastructure, improving performance by 300%.',
-      image: '/api/placeholder/600/400',
-      technologies: ['AWS', 'Docker', 'Kubernetes', 'Terraform', 'CI/CD'],
-      category: 'DevOps',
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: false
-    },
-    {
-      title: 'Real Estate Platform',
-      description: 'A comprehensive real estate platform with virtual tours, property management, and integrated CRM system.',
-      image: '/api/placeholder/600/400',
-      technologies: ['Vue.js', 'Node.js', 'PostgreSQL', 'Redis', 'WebRTC'],
-      category: 'Web Development',
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: false
-    },
-    {
-      title: 'Healthcare Management System',
-      description: 'A HIPAA-compliant healthcare management system with patient records, appointment scheduling, and telemedicine features.',
-      image: '/api/placeholder/600/400',
-      technologies: ['React', 'Node.js', 'MongoDB', 'WebRTC', 'HIPAA'],
-      category: 'Healthcare',
+      technologies: ['MongoDB', 'Express.js', 'React', 'Node.js', 'REST APIs', 'Chart.js'],
+      category: 'MERN Stack',
       liveUrl: '#',
       githubUrl: '#',
       featured: true
+    },
+    {
+      title: 'Inventory Management System',
+      description: 'A robust inventory tracking system with barcode scanning, automated reordering, and comprehensive reporting.',
+      image: '/api/placeholder/600/400',
+      technologies: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Mongoose', 'PDF Generation'],
+      category: 'MERN Stack',
+      liveUrl: '#',
+      githubUrl: '#',
+      featured: false
+    },
+    {
+      title: 'Restaurant Ordering System',
+      description: 'A full-stack restaurant management system with online ordering, kitchen display, and payment processing.',
+      image: '/api/placeholder/600/400',
+      technologies: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Socket.io', 'PayPal API'],
+      category: 'MERN Stack',
+      liveUrl: '#',
+      githubUrl: '#',
+      featured: false
+    },
+    {
+      title: 'Real Estate Portal',
+      description: 'A comprehensive property listing platform with advanced search, virtual tours, and agent management system.',
+      image: '/api/placeholder/600/400',
+      technologies: ['MongoDB', 'Express.js', 'React', 'Node.js', 'AWS S3', 'Google Maps API'],
+      category: 'MERN Stack',
+      liveUrl: '#',
+      githubUrl: '#',
+      featured: false
     }
   ]
 
-  const categories = ['All', 'Web Development', 'Mobile Development', 'Data Science', 'DevOps', 'Healthcare']
+  const categories = ['All', 'MERN Stack', 'React Applications', 'Node.js APIs', 'Database Solutions', 'Full-Stack']
 
   return (
-    <section id="projects" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Projects</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore some of my recent work and the innovative solutions I've delivered for clients across various industries.
+    <section id="projects" className="py-20 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+        <div className="absolute top-1/4 right-1/3 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl font-bold text-white mb-4 gradient-text">MERN Stack Projects</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Explore some of my recent full-stack MERN applications showcasing modern web development practices and scalable architecture.
           </p>
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-12 animate-slide-up" style={{ animationDelay: '0.2s' }}>
           {categories.map((category, index) => (
             <button
               key={index}
-              className={`px-6 py-2 rounded-full font-medium transition-colors duration-200 ${
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 hover-lift ${
                 category === 'All'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-blue-100 hover:text-blue-700'
+                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white animate-pulse-glow'
+                  : 'glass text-gray-300 hover:text-white hover:bg-blue-500/20'
               }`}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               {category}
             </button>
@@ -93,38 +100,39 @@ const Projects = () => {
         </div>
 
         {/* Featured Projects */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">Featured Projects</h3>
+        <div className="mb-16 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <h3 className="text-2xl font-bold text-white mb-8 gradient-text-secondary">Featured Projects</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {projects
               .filter(project => project.featured)
               .map((project, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100"
+                  className="glass-dark rounded-xl overflow-hidden hover-lift card-hover animate-slide-up"
+                  style={{ animationDelay: `${0.6 + index * 0.2}s` }}
                 >
-                  <div className="relative h-48 bg-gradient-to-br from-blue-400 to-purple-600">
+                  <div className="relative h-48 bg-gradient-to-br from-blue-500/20 to-purple-600/20 backdrop-blur-sm">
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-white text-4xl font-bold">
+                      <span className="text-white text-4xl font-bold gradient-text">
                         {project.title.split(' ').map(word => word[0]).join('')}
                       </span>
                     </div>
                     <div className="absolute top-4 left-4">
-                      <span className="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="glass px-3 py-1 rounded-full text-sm font-medium text-blue-300">
                         {project.category}
                       </span>
                     </div>
                   </div>
                   
                   <div className="p-6">
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h4>
-                    <p className="text-gray-600 mb-4">{project.description}</p>
+                    <h4 className="text-xl font-bold text-white mb-2">{project.title}</h4>
+                    <p className="text-gray-300 mb-4">{project.description}</p>
                     
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium"
+                          className="glass px-2 py-1 rounded text-xs font-medium text-blue-300 hover:text-white transition-colors duration-300"
                         >
                           {tech}
                         </span>
@@ -132,10 +140,10 @@ const Projects = () => {
                     </div>
                     
                     <div className="flex gap-4">
-                      <button className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200">
+                      <button className="btn-animate text-white px-4 py-2 rounded-lg font-semibold hover-lift">
                         View Live
                       </button>
-                      <button className="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200">
+                      <button className="glass border border-blue-500/30 text-blue-400 px-4 py-2 rounded-lg font-semibold hover:bg-blue-500/10 hover:text-blue-300 transition-all duration-300 hover-lift">
                         GitHub
                       </button>
                     </div>
@@ -146,52 +154,53 @@ const Projects = () => {
         </div>
 
         {/* All Projects Grid */}
-        <div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">All Projects</h3>
+        <div className="animate-fade-in" style={{ animationDelay: '1s' }}>
+          <h3 className="text-2xl font-bold text-white mb-8 gradient-text">All Projects</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100"
+                className="glass-dark rounded-xl overflow-hidden hover-lift card-hover animate-slide-up"
+                style={{ animationDelay: `${1.2 + index * 0.1}s` }}
               >
-                <div className="relative h-40 bg-gradient-to-br from-gray-400 to-gray-600">
+                <div className="relative h-40 bg-gradient-to-br from-blue-500/10 to-purple-600/10 backdrop-blur-sm">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-white text-2xl font-bold">
+                    <span className="text-white text-2xl font-bold gradient-text">
                       {project.title.split(' ').map(word => word[0]).join('')}
                     </span>
                   </div>
                   <div className="absolute top-3 left-3">
-                    <span className="bg-white text-gray-700 px-2 py-1 rounded text-xs font-medium">
+                    <span className="glass px-2 py-1 rounded text-xs font-medium text-blue-300">
                       {project.category}
                     </span>
                   </div>
                 </div>
                 
                 <div className="p-4">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">{project.title}</h4>
-                  <p className="text-gray-600 text-sm mb-3">{project.description}</p>
+                  <h4 className="text-lg font-bold text-white mb-2">{project.title}</h4>
+                  <p className="text-gray-300 text-sm mb-3">{project.description}</p>
                   
                   <div className="flex flex-wrap gap-1 mb-3">
                     {project.technologies.slice(0, 3).map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs"
+                        className="glass px-2 py-1 rounded text-xs text-blue-300"
                       >
                         {tech}
                       </span>
                     ))}
                     {project.technologies.length > 3 && (
-                      <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
+                      <span className="glass px-2 py-1 rounded text-xs text-gray-400">
                         +{project.technologies.length - 3}
                       </span>
                     )}
                   </div>
                   
                   <div className="flex gap-2">
-                    <button className="bg-blue-600 text-white px-3 py-1 rounded text-sm font-semibold hover:bg-blue-700 transition-colors duration-200">
+                    <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded text-sm font-semibold hover-lift">
                       View
                     </button>
-                    <button className="border border-gray-300 text-gray-700 px-3 py-1 rounded text-sm font-semibold hover:bg-gray-50 transition-colors duration-200">
+                    <button className="glass border border-blue-500/30 text-blue-400 px-3 py-1 rounded text-sm font-semibold hover:bg-blue-500/10 hover:text-blue-300 transition-all duration-300">
                       Code
                     </button>
                   </div>
@@ -202,23 +211,26 @@ const Projects = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-20 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg p-8 text-white">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold mb-2">200+</div>
-              <div className="text-blue-100">Projects Completed</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold mb-2">50+</div>
-              <div className="text-blue-100">Happy Clients</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold mb-2">5+</div>
-              <div className="text-blue-100">Years Experience</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold mb-2">99%</div>
-              <div className="text-blue-100">Client Satisfaction</div>
+        <div className="mt-20 glass-dark rounded-xl p-8 text-white animate-fade-in" style={{ animationDelay: '1.5s' }}>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl"></div>
+          <div className="relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+              <div className="animate-scale-in" style={{ animationDelay: '1.7s' }}>
+                <div className="text-3xl font-bold mb-2 gradient-text">50+</div>
+                <div className="text-gray-300">MERN Projects</div>
+              </div>
+              <div className="animate-scale-in" style={{ animationDelay: '1.9s' }}>
+                <div className="text-3xl font-bold mb-2 gradient-text-secondary">15+</div>
+                <div className="text-gray-300">Technologies</div>
+              </div>
+              <div className="animate-scale-in" style={{ animationDelay: '2.1s' }}>
+                <div className="text-3xl font-bold mb-2 gradient-text">5+</div>
+                <div className="text-gray-300">Years Experience</div>
+              </div>
+              <div className="animate-scale-in" style={{ animationDelay: '2.3s' }}>
+                <div className="text-3xl font-bold mb-2 gradient-text-secondary">100%</div>
+                <div className="text-gray-300">Code Quality</div>
+              </div>
             </div>
           </div>
         </div>
