@@ -121,7 +121,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 glass border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500/50 transition-all duration-300 text-white placeholder-gray-400"
+                    className="w-full px-4 py-3 glass border border-white/20 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500/50 transition-all duration-300 text-white placeholder-gray-400"
                     placeholder="John Doe"
                   />
                 </div>
@@ -137,7 +137,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 glass border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500/50 transition-all duration-300 text-white placeholder-gray-400"
+                    className="w-full px-4 py-3 glass border border-white/20 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500/50 transition-all duration-300 text-white placeholder-gray-400"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -153,7 +153,7 @@ const Contact = () => {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 glass border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500/50 transition-all duration-300 text-white placeholder-gray-400"
+                  className="w-full px-4 py-3 glass border border-white/20 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500/50 transition-all duration-300 text-white placeholder-gray-400"
                   placeholder="Your Company Name"
                 />
               </div>
@@ -167,7 +167,7 @@ const Contact = () => {
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 glass border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500/50 transition-all duration-300 text-white bg-slate-800/50"
+                  className="w-full px-4 py-3 glass border border-white/20 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500/50 transition-all duration-300 text-white bg-slate-800/50"
                 >
                   <option value="">Select a service</option>
                   {services.map((service, index) => (
@@ -189,7 +189,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 glass border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500/50 transition-all duration-300 text-white placeholder-gray-400"
+                  className="w-full px-4 py-3 glass border border-white/20 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500/50 transition-all duration-300 text-white placeholder-gray-400"
                   placeholder="Describe your project requirements, timeline, and any specific MERN stack features needed..."
                 />
               </div>
@@ -202,6 +202,7 @@ const Contact = () => {
                     ? 'bg-gray-400 cursor-not-allowed'
                     : 'btn-animate text-white'
                 }`}
+                aria-label={isSubmitting ? 'Sending your message' : 'Send your project inquiry'}
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>

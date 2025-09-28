@@ -164,9 +164,12 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 glass border border-white/20 rounded-l-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500/50 text-sm text-white placeholder-gray-400"
+                className="flex-1 px-4 py-2 glass border border-white/20 rounded-l-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500/50 text-sm text-white placeholder-gray-400"
               />
-              <button className="btn-animate text-white px-6 py-2 rounded-r-lg hover-lift text-sm font-medium">
+              <button 
+                className="btn-animate text-white px-6 py-2 rounded-r-lg hover-lift text-sm font-medium"
+                aria-label="Subscribe to newsletter updates"
+              >
                 Subscribe
               </button>
             </div>

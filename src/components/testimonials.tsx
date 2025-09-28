@@ -160,13 +160,15 @@ const Testimonials = () => {
           <div className="flex justify-center mt-6 gap-4">
             <button
               onClick={prevTestimonial}
-              className="p-2 rounded-full glass hover:bg-blue-500/20 transition-all duration-300 hover-lift"
+              className="p-2 rounded-full glass hover:bg-cyan-500/20 transition-all duration-300 hover-lift"
+              aria-label="View previous testimonial"
             >
               <svg
                 className="w-5 h-5 text-gray-300 hover:text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -179,13 +181,15 @@ const Testimonials = () => {
 
             <button
               onClick={nextTestimonial}
-              className="p-2 rounded-full glass hover:bg-blue-500/20 transition-all duration-300 hover-lift"
+              className="p-2 rounded-full glass hover:bg-cyan-500/20 transition-all duration-300 hover-lift"
+              aria-label="View next testimonial"
             >
               <svg
                 className="w-5 h-5 text-gray-300 hover:text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
