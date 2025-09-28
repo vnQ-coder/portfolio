@@ -85,7 +85,7 @@ const Services = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-800 via-slate-900 to-slate-800">
         <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-rose-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -112,7 +112,7 @@ const Services = () => {
               <div className="space-y-2">
                 {service.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 animate-pulse"></span>
+                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3 animate-pulse"></span>
                     <span className="text-sm text-gray-300">{feature}</span>
                   </div>
                 ))}
@@ -136,7 +136,7 @@ const Services = () => {
               { number: 4, title: "Deploy", description: "Deploying to production with CI/CD pipelines and providing ongoing maintenance and support." }
             ].map((step, index) => (
               <div key={index} className="text-center animate-slide-up hover-lift" style={{ animationDelay: `${1.2 + index * 0.2}s` }}>
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold animate-pulse-glow hover-glow">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-rose-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold animate-pulse-glow hover-glow">
                   {step.number}
                 </div>
                 <h4 className="text-lg font-semibold text-white mb-2">{step.title}</h4>
@@ -151,7 +151,7 @@ const Services = () => {
         {/* CTA Section */}
         <div className="mt-16 text-center animate-fade-in" style={{ animationDelay: '2s' }}>
           <div className="glass-dark rounded-xl p-8 text-white relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-rose-500/20 rounded-xl"></div>
             <div className="relative z-10">
               <h3 className="text-2xl font-bold mb-4 gradient-text">Ready to Build Your Next App?</h3>
               <p className="text-lg mb-6 text-gray-300">

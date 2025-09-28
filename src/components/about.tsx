@@ -47,9 +47,9 @@ const About = () => {
     >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-float"></div>
         <div
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-float"
+          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-rose-500/10 rounded-full blur-3xl animate-float"
           style={{ animationDelay: "3s" }}
         ></div>
       </div>
@@ -109,7 +109,7 @@ const About = () => {
                 {skills.map((skill, index) => (
                   <span
                     key={index}
-                    className="glass px-3 py-1 rounded-full text-sm font-medium text-blue-300 hover:text-white hover-glow transition-all duration-300"
+                    className="glass px-3 py-1 rounded-full text-sm font-medium text-cyan-300 hover:text-white hover-glow transition-all duration-300"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     {skill}

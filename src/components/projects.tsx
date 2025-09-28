@@ -1,4 +1,3 @@
-import Image from 'next/image'
 
 const Projects = () => {
   const projects = [
@@ -89,10 +88,11 @@ const Projects = () => {
               key={index}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 hover-lift ${
                 category === 'All'
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white animate-pulse-glow'
-                  : 'glass text-gray-300 hover:text-white hover:bg-blue-500/20'
+                  ? 'bg-gradient-to-r from-cyan-500 to-rose-500 text-white animate-pulse-glow'
+                  : 'glass text-gray-300 hover:text-white hover:bg-cyan-500/20'
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
+              aria-label={`Filter projects by ${category}`}
             >
               {category}
             </button>
@@ -140,10 +140,16 @@ const Projects = () => {
                     </div>
                     
                     <div className="flex gap-4">
-                      <button className="btn-animate text-white px-4 py-2 rounded-lg font-semibold hover-lift">
+                      <button 
+                        className="btn-animate text-white px-4 py-2 rounded-lg font-semibold hover-lift"
+                        aria-label={`View live demo of ${project.title}`}
+                      >
                         View Live
                       </button>
-                      <button className="glass border border-blue-500/30 text-blue-400 px-4 py-2 rounded-lg font-semibold hover:bg-blue-500/10 hover:text-blue-300 transition-all duration-300 hover-lift">
+                      <button 
+                        className="glass border border-cyan-500/30 text-cyan-400 px-4 py-2 rounded-lg font-semibold hover:bg-cyan-500/10 hover:text-cyan-300 transition-all duration-300 hover-lift"
+                        aria-label={`View source code for ${project.title} on GitHub`}
+                      >
                         GitHub
                       </button>
                     </div>
@@ -197,10 +203,16 @@ const Projects = () => {
                   </div>
                   
                   <div className="flex gap-2">
-                    <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded text-sm font-semibold hover-lift">
+                    <button 
+                      className="bg-gradient-to-r from-cyan-500 to-rose-500 text-white px-3 py-1 rounded text-sm font-semibold hover-lift"
+                      aria-label={`View details of ${project.title}`}
+                    >
                       View
                     </button>
-                    <button className="glass border border-blue-500/30 text-blue-400 px-3 py-1 rounded text-sm font-semibold hover:bg-blue-500/10 hover:text-blue-300 transition-all duration-300">
+                    <button 
+                      className="glass border border-cyan-500/30 text-cyan-400 px-3 py-1 rounded text-sm font-semibold hover:bg-cyan-500/10 hover:text-cyan-300 transition-all duration-300"
+                      aria-label={`View source code of ${project.title}`}
+                    >
                       Code
                     </button>
                   </div>

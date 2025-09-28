@@ -1,65 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
 
 const Hero = () => {
-  const [particles, setParticles] = useState<
-    Array<{ id: number; x: number; y: number; delay: number }>
-  >([]);
-
-  useEffect(() => {
-    // Generate particles
-    const newParticles = Array.from({ length: 50 }, (_, i) => ({
-      id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      delay: Math.random() * 20,
-    }));
-    setParticles(newParticles);
-  }, []);
-
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 section-transition"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden section-transition"
     >
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Clean Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-float"></div>
         <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
+          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-rose-500/10 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "3s" }}
         ></div>
       </div>
-
-      {/* Floating Particles */}
-      <div className="particles absolute inset-0">
-        {particles.map((particle) => (
-          <div
-            key={particle.id}
-            className="particle absolute"
-            style={{
-              left: `${particle.x}%`,
-              top: `${particle.y}%`,
-              animationDelay: `${particle.delay}s`,
-              background: `hsl(${(particle.id * 137.5) % 360}, 70%, 60%)`,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Gradient Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-float"></div>
-      <div
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float"
-        style={{ animationDelay: "2s" }}
-      ></div>
-      <div
-        className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl animate-float"
-        style={{ animationDelay: "4s" }}
-      ></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -135,10 +91,17 @@ const Hero = () => {
               className="flex flex-col sm:flex-row gap-4 animate-fade-in"
               style={{ animationDelay: "1.4s" }}
             >
-              <button className="btn-animate text-white px-8 py-3 rounded-lg font-semibold hover-lift">
+              <button 
+                className="btn-animate text-white px-8 py-3 rounded-lg font-semibold hover-lift"
+                aria-label="Hire me for your next MERN stack project"
+              >
                 Hire Me
               </button>
-              <button className="glass border border-blue-500/30 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500/10 hover:text-blue-300 transition-all duration-300 hover-lift">
+              <button 
+                className="glass border border-cyan-500/30 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500/10 hover:text-cyan-300 transition-all duration-300 hover-lift"
+                aria-label="View my portfolio projects"
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 View Projects
               </button>
             </div>
@@ -152,49 +115,45 @@ const Hero = () => {
             <div className="relative">
               {/* Main Profile Container */}
               <div className="relative">
-                <div className="w-80 h-80 lg:w-96 lg:h-96 relative rounded-full overflow-hidden shadow-2xl animate-float">
+                <div className="w-80 h-80 lg:w-96 lg:h-96 relative rounded-full overflow-hidden shadow-2xl animate-float aspect-square">
                   {/* Glowing Ring */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 p-1 animate-pulse-glow">
-                    <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-full flex items-center justify-center relative">
-                      {/* Placeholder for profile image */}
-                      <div className="w-full h-full bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-cyan-600/20 flex items-center justify-center backdrop-blur-sm">
-                        <span className="text-white text-6xl font-bold gradient-text">
-                          YN
-                        </span>
-                      </div>
-                      {/* You can replace the above div with an actual Image component:
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 via-rose-500 to-purple-500 p-1 animate-pulse-glow">
+                    <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-full flex items-center justify-center relative profile-container">
+                      {/* Your Profile Image */}
                       <Image
-                        src="/profile-image.jpg"
-                        alt="Rohail Butt"
+                        src="/1759055542079.jpg"
+                        alt="Rohail Butt - Senior MERN Stack Developer"
                         fill
-                        className="object-cover"
+                        className="profile-image"
+                        priority
+                        quality={95}
+                        sizes="(max-width: 768px) 320px, 384px"
                       />
-                      */}
                     </div>
                   </div>
                 </div>
 
                 {/* Floating Tech Icons */}
                 <div
-                  className="absolute -top-8 -right-8 w-16 h-16 glass rounded-xl flex items-center justify-center animate-float hover-glow"
+                  className="absolute -top-8 -right-8 w-16 h-16 glass rounded-xl flex items-center justify-center animate-float hover-glow border-cyan-500/20"
                   style={{ animationDelay: "1s" }}
                 >
                   <span className="text-2xl">⚡</span>
                 </div>
                 <div
-                  className="absolute -bottom-8 -left-8 w-14 h-14 glass rounded-xl flex items-center justify-center animate-float hover-glow"
+                  className="absolute -bottom-8 -left-8 w-14 h-14 glass rounded-xl flex items-center justify-center animate-float hover-glow border-cyan-500/20"
                   style={{ animationDelay: "2s" }}
                 >
                   <span className="text-xl">🚀</span>
                 </div>
                 <div
-                  className="absolute top-1/2 -left-12 w-12 h-12 glass rounded-xl flex items-center justify-center animate-float hover-glow"
+                  className="absolute top-1/2 -left-12 w-12 h-12 glass rounded-xl flex items-center justify-center animate-float hover-glow border-cyan-500/20"
                   style={{ animationDelay: "3s" }}
                 >
                   <span className="text-lg">💻</span>
                 </div>
                 <div
-                  className="absolute top-1/4 -right-12 w-12 h-12 glass rounded-xl flex items-center justify-center animate-float hover-glow"
+                  className="absolute top-1/4 -right-12 w-12 h-12 glass rounded-xl flex items-center justify-center animate-float hover-glow border-cyan-500/20"
                   style={{ animationDelay: "4s" }}
                 >
                   <span className="text-lg">🎯</span>

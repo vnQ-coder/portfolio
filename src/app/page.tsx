@@ -42,15 +42,17 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="min-h-screen">
+    <main className="smooth-scroll-container scroll-optimized">
       <Header />
-      <Hero />
-      <About />
-      <Services />
-      <Projects />
-      <Testimonials />
-      <Contact />
-      <Footer />
+      <div className="pt-16">
+        <Hero />
+        <About />
+        <Services />
+        <Projects />
+        <Testimonials />
+        <Contact />
+        <Footer />
+      </div>
     </main>
   )
 }
