@@ -171,7 +171,3 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 ## 📞 Support
 
 If you have any questions or need help customizing the portfolio, please open an issue or contact me directly.
-
----
-
-**Note**: This portfolio template is inspired by Muhammad Akash's design and is created for educational and portfolio purposes.
